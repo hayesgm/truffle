@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "truffle",
+  "version": "v5.0.2",
   "scripts": {
     "build:debugger": "cd packages/truffle-debugger && npm run build",
     "build:decode-utils": "cd packages/truffle-decode-utils && npm run build",

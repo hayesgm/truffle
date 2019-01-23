@@ -126,6 +126,7 @@ var Test = {
   createMocha: function(config) {
     // Allow people to specify config.mocha in their config.
     var mochaConfig = config.mocha || {};
+    var mochaLib = config.mochaLib || Mocha;
 
     // If the command line overrides color usage, use that.
     if (config.colors != null) {
@@ -137,7 +138,7 @@ var Test = {
       mochaConfig.useColors = true;
     }
 
-    var mocha = new Mocha(mochaConfig);
+    var mocha = new mochaLib(mochaConfig);
 
     return mocha;
   },
